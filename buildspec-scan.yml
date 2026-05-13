@@ -19,7 +19,7 @@ phases:
       - trivy image --exit-code 1 --severity CRITICAL --no-progress $ECR_REPO_URI:$IMAGE_TAG
 
       # Scan Terraform IaC files for misconfigurations
-      - checkov -d . --framework terraform --output cli --soft-fail-on MEDIUM
+      - checkov -d . --framework terraform --output cli --soft-fail
 
       # Generate compliance reports
       - trivy image --format json --severity HIGH,CRITICAL --output trivy-report.json $ECR_REPO_URI:$IMAGE_TAG

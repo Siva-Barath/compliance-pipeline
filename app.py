@@ -62,7 +62,7 @@ def home():
 </head>
 <body>
     <div class="container">
-        <h1>&#128274; DevSecOps CI/CD Pipeline</h1>
+        <h1>&#128274; DevSecOps CI/CD Pipeline TESTING</h1>
         <h2>Automated Compliance Scans for Containerized Applications</h2>
         <div class="badge">&#9679; LIVE — Deployed on AWS ECS Fargate</div>
 
@@ -100,7 +100,7 @@ def home():
         </div>
 
         <div class="version">
-            Version <span>1.0</span> &nbsp;|&nbsp; Built by <span>Siva Barath</span> &nbsp;|&nbsp; AWS CodeBuild + CodePipeline
+            Version <span>1.0</span> &nbsp;|&nbsp; Built by <span>TEAM 3</span> &nbsp;|&nbsp; AWS CodeBuild + CodePipeline
         </div>
     </div>
 </body>

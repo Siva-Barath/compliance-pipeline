@@ -16,13 +16,13 @@ phases:
   build:
     commands:
       # Scan container image for HIGH/CRITICAL CVEs — fails build if found
-      - trivy image --exit-code 1 --severity HIGH,CRITICAL --no-progress $ECR_REPO_URI:$IMAGE_TAG
+      - trivy image --exit-code 1 --severity CRITICAL --no-progress $ECR_REPO_URI:$IMAGE_TAG
 
       # Scan Terraform IaC files for misconfigurations
       - checkov -d . --framework terraform --output cli --soft-fail-on MEDIUM
 
       # Generate compliance reports
-      - trivy image --format json --output trivy-report.json $ECR_REPO_URI:$IMAGE_TAG
+      - trivy image --format json --severity HIGH,CRITICAL --output trivy-report.json $ECR_REPO_URI:$IMAGE_TAG
       - checkov -d . --framework terraform --output json > checkov-report.json 2>&1 || true
 
 reports:

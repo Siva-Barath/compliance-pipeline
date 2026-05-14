@@ -62,7 +62,7 @@ def home():
 </head>
 <body>
     <div class="container">
-        <h1>&#128274; DevSecOps CI/CD Pipeline </h1>
+        <h1>&#128274; DevSecOps CI/CD SHYAM</h1>
         <h2>Automated Compliance Scans for Containerized Applications</h2>
         <div class="badge">&#9679; LIVE — Deployed on AWS ECS Fargate</div>
 
